@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Mortaza Hassani / Personal Website"
+title                    : "Mortaza Hassani"
 title_separator          : "-"
 name                     : &name "Mortaza Hassani"
 description              : &description "Cybersecurity Enthusiasts & Computer Systems Engineer"
@@ -24,10 +24,10 @@ author:
   avatar           : "profile.jpg"
   name             : "Mortaza HASSANI"
   pronouns         : "He/Him"  
-  bio              : "A man, son, brother, student, teacher, engineer, entrepreneur, leader and developer.
+  bio              : "A man, son, brother, student, teacher, researcher, engineer, entrepreneur, leader and developer.
                       'I am the Change that I Seek in the World ;)' "
   location         : "Brussels, Belgium"
-  employer         : "ULB"
+  employer         : "Université Libre de Bruxelles (ULB)"
   uri              : # URL
   email            : "mortaza.hassani@outlook.com" 
 
