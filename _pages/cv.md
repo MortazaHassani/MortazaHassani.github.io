@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+
+* M.S. Cybersecurity (IoT Specialization), Universite Bretagne Sud & Universite Libre De Bruxelles, 2025
+* B.E. in Computer Systems Engineering, Mohammad Ali Jinnah University, 2023
 
 Work experience
 ======

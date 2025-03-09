@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Mortaza Hassani | Personal website"
+title: "Mortaza Hassani
 author_profile: true
 redirect_from: 
   - /about/
