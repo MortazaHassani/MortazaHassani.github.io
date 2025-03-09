@@ -49,7 +49,7 @@ Publications
   
 Talks
 ======
-  <ul>{% for post in site.talks reversed %}
+  <ul>{% for post in site.achievements reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
   
