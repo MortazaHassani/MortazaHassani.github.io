@@ -25,7 +25,7 @@ author:
   name             : "Mortaza HASSANI"
   pronouns         : "He/Him"  
   bio              : "A man, son, brother, student, teacher, researcher, engineer, entrepreneur, leader and developer.
-                      'I am the Change that I Seek in the World ;)' "
+                      'I am the Change that I Seek in the World!' "
   location         : "Brussels, Belgium"
   employer         : "Université Libre de Bruxelles (ULB)"
   uri              : # URL
@@ -50,7 +50,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "mortazahassani" # Replace this with you Bluesky username
+  bluesky          : # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -274,10 +274,10 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _talks
+  # _Achievements
   - scope:
       path: ""
-      type: talks
+      type: achievements
     values:
       layout: talk
       author_profile: true
