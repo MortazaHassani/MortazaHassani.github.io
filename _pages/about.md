@@ -7,27 +7,24 @@ redirect_from:
   - /about.html
 ---
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-affiliation">Ph.D. Researcher · ECE · UMass Amherst</div>
+      <div class="hero-affiliation">Ph.D. Researcher &middot; Electrical &amp; Computer Engineering</div>
       <h1 class="hero-name">Mortaza Hassani</h1>
-      <div class="hero-title">Hardware Security &amp; Embedded Systems</div>
+      <div class="hero-title">Hardware Security &middot; Secure Embedded Systems &middot; Medical Device Security</div>
       <div class="hero-bio">
         <p>
-          I am a Ph.D. student in Electrical &amp; Computer Engineering at the
-          <strong>University of Massachusetts Amherst</strong>, advised by
-          <strong>Prof. Wayne Burleson</strong>. My research focuses on
-          securing implantable and wearable medical devices against
-          side-channel attacks, electromagnetic interference, and
-          hardware-level vulnerabilities.
+          My research focuses on the security of neural medical devices —
+          implantable neurostimulators and related bioelectronic implants.
+          I work on hardware-level attack surfaces, side-channel analysis,
+          and secure SoC design for safety-critical embedded systems.
         </p>
       </div>
       <div class="hero-cta">
         <a href="/research/" class="btn btn-primary">Research</a>
         <a href="/publications/" class="btn btn-secondary">Publications</a>
-        <a href="/files/resume_MortazaHassani.pdf" class="btn btn-secondary" target="_blank" rel="noopener">CV (PDF)</a>
+        <a href="/files/resume_MortazaHassani.pdf" class="btn btn-secondary" target="_blank" rel="noopener">CV</a>
       </div>
       <div class="hero-social">
         <a href="https://github.com/MortazaHassani" target="_blank" rel="noopener">
@@ -38,66 +35,42 @@ redirect_from:
           <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
         </a>
-        <a href="https://youtube.com/@MortazaHassani" target="_blank" rel="noopener">
-          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-          YouTube
-        </a>
       </div>
     </div>
     <div class="hero-photo">
-      <img src="/images/profile.jpg" alt="Mortaza Hassani" width="220" height="220">
+      <img src="/images/profile.jpg" alt="Mortaza Hassani" width="200" height="200">
     </div>
   </div>
 </section>
 
-<!-- RESEARCH INTERESTS -->
 <section class="home-section">
   <div class="home-section-inner">
     <div class="section-header">
       <h2 class="section-title">Research Interests</h2>
-      <a href="/research/" class="section-link">View all →</a>
+      <a href="/research/" class="section-link">More &rarr;</a>
     </div>
-    <div class="research-grid">
-      <div class="research-card">
-        <div class="research-icon">🔐</div>
-        <h3>Hardware Security &amp; Side-Channel Analysis</h3>
-        <p>Power analysis, EM side-channel attacks, and countermeasures for embedded SoCs and implantable devices.</p>
-      </div>
-      <div class="research-card">
-        <div class="research-icon">🏥</div>
-        <h3>Medical Device Security</h3>
-        <p>Security of implantable neurostimulators and IoMT ecosystems — privacy, GDPR/FDA compliance, and hardware countermeasures.</p>
-      </div>
-      <div class="research-card">
-        <div class="research-icon">⚙️</div>
-        <h3>Secure SoC Design</h3>
-        <p>RISC-V based secure SoC frameworks with hardware accelerators and AI-in-the-loop anomaly detection.</p>
-      </div>
-      <div class="research-card">
-        <div class="research-icon">🔬</div>
-        <h3>Cryptographic Hardware</h3>
-        <p>Efficient hardware implementations of cryptographic primitives, zero-knowledge proofs, and lightweight ciphers.</p>
-      </div>
-      <div class="research-card">
-        <div class="research-icon">📡</div>
-        <h3>IoT &amp; Embedded Systems</h3>
-        <p>Secure firmware, JTAG/UART interface analysis, firmware extraction, and reverse engineering for IoT devices.</p>
-      </div>
-      <div class="research-card">
-        <div class="research-icon">🛡️</div>
-        <h3>Threat Modeling &amp; Fuzzing</h3>
-        <p>Hardware and firmware threat modeling, fault injection, cache-timing vulnerabilities, and AFL++ fuzzing.</p>
-      </div>
+    <div class="research-keywords">
+      <span class="kw">Neural Medical Device Security</span>
+      <span class="kw">Implantable Neurostimulators</span>
+      <span class="kw">Side-Channel Analysis</span>
+      <span class="kw">Secure SoC Design</span>
+      <span class="kw">Secure Embedded Systems</span>
+      <span class="kw">Hardware Cryptography</span>
+      <span class="kw">RISC-V Security</span>
+      <span class="kw">Electromagnetic Analysis</span>
+      <span class="kw">Fault Injection</span>
+      <span class="kw">IoMT Security</span>
+      <span class="kw">FPGA Security</span>
+      <span class="kw">Reverse Engineering</span>
     </div>
   </div>
 </section>
 
-<!-- LATEST NEWS -->
 <section class="home-section-alt">
   <div class="home-section-inner">
     <div class="section-header">
-      <h2 class="section-title">Latest News</h2>
-      <a href="/news/" class="section-link">All news →</a>
+      <h2 class="section-title">Latest Updates</h2>
+      <a href="/news/" class="section-link">All updates &rarr;</a>
     </div>
     <div class="news-list">
       {% assign sorted_news = site.news | sort: 'date' | reverse %}
@@ -105,10 +78,8 @@ redirect_from:
       <div class="news-item-compact">
         <div class="news-date">{{ item.date | date: "%b %Y" }}</div>
         <div class="news-content-compact">
-          {% if item.tag %}
-          <div class="news-tag {{ item.tag }}">{{ item.tag }}</div>
-          {% endif %}
-          <p><strong>{{ item.title }}</strong>{% if item.excerpt %} — {{ item.excerpt | strip_html | truncate: 120 }}{% endif %}</p>
+          {% if item.tag %}<span class="news-tag {{ item.tag }}">{{ item.tag }}</span>{% endif %}
+          <p><a href="{{ item.url | relative_url }}">{{ item.title }}</a></p>
         </div>
       </div>
       {% endfor %}
@@ -116,44 +87,31 @@ redirect_from:
   </div>
 </section>
 
-<!-- SELECTED PUBLICATIONS -->
 <section class="home-section">
   <div class="home-section-inner">
     <div class="section-header">
       <h2 class="section-title">Selected Publications</h2>
-      <a href="/publications/" class="section-link">All publications →</a>
+      <a href="/publications/" class="section-link">All publications &rarr;</a>
     </div>
     <div class="pub-list">
       {% assign selected_pubs = site.publications | where: "selected", true | sort: "date" | reverse %}
       {% for pub in selected_pubs limit:4 %}
       <div class="pub-card">
         <div class="pub-meta">
-          {% if pub.pub_type %}
-          <span class="pub-type {{ pub.pub_type }}">{{ pub.pub_type }}</span>
-          {% endif %}
+          {% if pub.pub_type %}<span class="pub-type {{ pub.pub_type }}">{{ pub.pub_type }}</span>{% endif %}
           <span class="pub-year">{{ pub.date | date: "%Y" }}</span>
         </div>
-        <div class="pub-title">
-          <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
-        </div>
-        {% if pub.authors %}
-        <div class="pub-authors">{{ pub.authors }}</div>
-        {% endif %}
-        {% if pub.venue %}
-        <div class="pub-venue">{{ pub.venue }}</div>
-        {% endif %}
+        <div class="pub-title"><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></div>
+        {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
+        {% if pub.venue %}<div class="pub-venue">{{ pub.venue }}</div>{% endif %}
         <div class="pub-links">
-          {% if pub.paperurl %}
-          <a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">📄 PDF</a>
-          {% endif %}
-          {% if pub.codeurl %}
-          <a href="{{ pub.codeurl }}" class="pub-link" target="_blank" rel="noopener">💻 Code</a>
-          {% endif %}
+          {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{% endif %}
+          {% if pub.codeurl %}<a href="{{ pub.codeurl }}" class="pub-link" target="_blank" rel="noopener">Code</a>{% endif %}
         </div>
       </div>
       {% endfor %}
       {% if selected_pubs.size == 0 %}
-      <p>Publications will appear here. <a href="/publications/">View all publications.</a></p>
+      <p>Publications coming soon. <a href="/publications/">View all.</a></p>
       {% endif %}
     </div>
   </div>

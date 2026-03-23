@@ -2,7 +2,7 @@
 layout: page
 permalink: /research/
 title: "Research"
-subtitle: "My work sits at the intersection of hardware security, embedded systems, and medical device protection."
+subtitle: "Security of neural medical devices, secure SoC design, and hardware-level attack analysis."
 label: "Research"
 ---
 
@@ -10,91 +10,84 @@ label: "Research"
 
   <div class="research-area">
     <div class="research-area-label">
-      <span class="icon">🏥</span>
-      <h3>Medical Device Security</h3>
+      <h3>Primary</h3>
     </div>
     <div class="research-area-content">
-      <h3>Securing Implantable Medical Devices</h3>
+      <h3>Security of Neural Medical Devices</h3>
       <p>
-        My primary research (NSF-funded, UMass Amherst VLSI &amp; Security Lab, advised by
-        <strong>Prof. Wayne Burleson</strong>) targets the security of
-        <strong>Implantable Neurostimulators</strong> — devices used for treating Parkinson's
-        disease, epilepsy, and chronic pain. These devices communicate wirelessly and are
-        vulnerable to Side-Channel Analysis (SCA), Electromagnetic Interference (EMI), and
-        Man-in-the-Middle (MitM) attacks.
+        My primary research targets the security of implantable neurostimulators — devices used for treating
+        Parkinson's disease, epilepsy, treatment-resistant depression, and chronic pain. These systems communicate
+        wirelessly and present a critical attack surface: a compromised implant can directly threaten patient safety.
       </p>
-      <p>My work involves:</p>
+      <p>
+        I conduct hardware security assessments of these devices, analyze their communication protocols
+        (BLE, proprietary RF), and develop countermeasures appropriate for power- and area-constrained
+        implantable hardware.
+      </p>
       <ul>
-        <li>Hardware teardowns and security assessments of IoMT ecosystems</li>
-        <li>JTAG/UART interface analysis for firmware extraction and reverse engineering</li>
+        <li>Hardware teardown and attack surface enumeration of IoMT devices</li>
+        <li>JTAG/UART interface analysis for firmware extraction</li>
         <li>Timing-based side-channel analysis of BLE pairing protocols</li>
-        <li>Designing privacy-preserving hardware architectures compliant with GDPR and FDA standards</li>
-        <li>AI-in-the-loop anomaly detection for real-time threat response</li>
+        <li>Privacy-preserving hardware architectures under GDPR and FDA frameworks</li>
       </ul>
     </div>
   </div>
 
   <div class="research-area">
     <div class="research-area-label">
-      <span class="icon">🔐</span>
+      <h3>Hardware</h3>
+    </div>
+    <div class="research-area-content">
       <h3>Side-Channel Analysis</h3>
-    </div>
-    <div class="research-area-content">
-      <h3>Power &amp; EM Side-Channel Attacks</h3>
       <p>
-        Side-channel attacks exploit physical information leaked during cryptographic
-        computations — power consumption, electromagnetic radiation, timing variations —
-        to extract secret keys without breaking the algorithm mathematically.
+        Side-channel attacks extract secret information from physical emissions during computation —
+        power consumption, electromagnetic radiation, or timing variations — without breaking the
+        underlying algorithm. I work on both attack methodology and hardware countermeasures.
       </p>
-      <p>My research explores:</p>
       <ul>
-        <li>Differential Power Analysis (DPA) and Correlation Power Analysis (CPA)</li>
-        <li>Electromagnetic SCA using ChipWhisperer and custom setups</li>
-        <li>Countermeasures: masking, hiding, and architectural-level protections</li>
-        <li>AES-128 biclique cryptanalysis and hardware implementations</li>
+        <li>Differential and Correlation Power Analysis (DPA / CPA)</li>
+        <li>Electromagnetic side-channel acquisition and analysis</li>
+        <li>Countermeasures: masking, hiding, balanced logic styles</li>
+        <li>ChipWhisperer-based evaluation of embedded cryptographic implementations</li>
       </ul>
     </div>
   </div>
 
   <div class="research-area">
     <div class="research-area-label">
-      <span class="icon">⚙️</span>
+      <h3>Architecture</h3>
+    </div>
+    <div class="research-area-content">
       <h3>Secure SoC Design</h3>
-    </div>
-    <div class="research-area-content">
-      <h3>RISC-V Based Secure SoC Frameworks</h3>
       <p>
-        Modern SoCs integrate dozens of IP cores, creating a large attack surface.
-        My research investigates architectural-level security for RISC-V SoCs,
-        including hardware accelerators for cryptographic workloads and AI-in-the-loop
-        security monitoring.
+        Designing security into a system-on-chip from the ground up rather than patching it afterwards.
+        My work covers RISC-V based secure SoC architectures integrating hardware cryptographic accelerators
+        and AI-assisted anomaly detection for embedded threat response.
       </p>
       <ul>
-        <li>RISC-V hardware threat modeling (fault injection, cache timing, pointer integrity)</li>
-        <li>FPGA-based MitM sniffer for intercepting encrypted TPM-processor traffic</li>
-        <li>Integrating UART, SPI, and I²C soft-core peripherals using LiteX</li>
-        <li>Automated SoC build configuration and verification</li>
+        <li>RISC-V hardware threat modeling: fault injection, cache timing, pointer integrity</li>
+        <li>FPGA-based MitM interposer for TPM-to-processor traffic interception</li>
+        <li>Soft-core peripheral integration via LiteX (UART, SPI, I²C)</li>
+        <li>NSF-funded secure SoC research for implantable neurostimulators</li>
       </ul>
     </div>
   </div>
 
   <div class="research-area">
     <div class="research-area-label">
-      <span class="icon">🔬</span>
-      <h3>Cryptographic Hardware</h3>
+      <h3>Cryptography</h3>
     </div>
     <div class="research-area-content">
-      <h3>Efficient Cryptographic Implementations</h3>
+      <h3>Hardware Cryptography</h3>
       <p>
-        Hardware implementations of cryptographic primitives must balance security,
-        performance, and area constraints — especially in resource-constrained embedded
-        systems. My interests include:
+        Efficient and secure hardware implementations of cryptographic primitives for resource-constrained
+        embedded systems, with emphasis on correctness under physical attack conditions.
       </p>
       <ul>
-        <li>Lightweight ciphers (SPECK, GOST) for IoT devices</li>
-        <li>Zero-Knowledge Proof systems and their hardware acceleration</li>
-        <li>Block cipher analysis and cryptanalysis (AES biclique, GOST benchmarking)</li>
-        <li>Hardware security modules and TPM interface security</li>
+        <li>Lightweight ciphers for IoT: SPECK, GOST</li>
+        <li>AES-128 biclique cryptanalysis</li>
+        <li>Zero-knowledge proof hardware acceleration</li>
+        <li>TPM interface security and firmware-level cryptographic protocols</li>
       </ul>
     </div>
   </div>
@@ -103,31 +96,28 @@ label: "Research"
 
 <hr>
 
-<h2>Collaborations &amp; Funding</h2>
-
 <div class="cv-section">
+  <div class="cv-section-title">Research Positions</div>
   <div class="cv-entry">
     <div class="cv-period">2025 – Present</div>
     <div class="cv-details">
-      <h4>NSF-Funded Research — Implantable Neurostimulator Security</h4>
-      <span class="cv-institution">VLSI &amp; Security Lab, UMass Amherst</span>
-      <span class="cv-location">Amherst, MA, USA · Advisor: Prof. Wayne Burleson</span>
+      <h4>Graduate Research Assistant</h4>
+      <span class="cv-institution">VLSI &amp; Security Lab · Advisor: Prof. Wayne Burleson</span>
+      <span class="cv-location">NSF-funded · Implantable Neurostimulator Security</span>
     </div>
   </div>
   <div class="cv-entry">
     <div class="cv-period">Mar–Aug 2025</div>
     <div class="cv-details">
-      <h4>Visiting Research Scholar — Security of Medical Devices</h4>
-      <span class="cv-institution">University of Massachusetts Amherst</span>
-      <span class="cv-location">Amherst, MA, USA</span>
+      <h4>Visiting Research Scholar</h4>
+      <span class="cv-institution">Security of Medical Devices Group</span>
     </div>
   </div>
   <div class="cv-entry">
     <div class="cv-period">Apr–Jun 2024</div>
     <div class="cv-details">
-      <h4>Research Intern — Offensive Tool Development for SoC Interfaces</h4>
-      <span class="cv-institution">Lab-STICC – ARCAD, Université Bretagne Sud</span>
-      <span class="cv-location">Lorient, France</span>
+      <h4>Research Intern — Offensive SoC Security</h4>
+      <span class="cv-institution">Lab-STICC – ARCAD · Université Bretagne Sud · Lorient, France</span>
     </div>
   </div>
 </div>
