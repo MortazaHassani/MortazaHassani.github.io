@@ -279,34 +279,36 @@ nav .nav-menu {
 
 /* --- Footer --- */
 .site-footer {
-  background: color-mix(in srgb, var(--bg-surface), transparent 6%);
-  color: var(--fg-mid);
-  padding: 3rem 0 2.2rem;
-  margin-top: auto;
+  background: transparent;
+  color: var(--fg-muted);
+  padding: 1rem 0;
   border-top: 1px solid var(--line);
 }
 
 .footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1.75rem;
+  padding: 0 1.5rem;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 2.5rem;
-  margin-bottom: 2rem;
+.footer-inner p {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--fg-muted);
 }
 
-.footer-brand h3 {
-  font-family: var(--font-serif);
-  color: var(--fg);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
+.footer-grid,
+.footer-brand,
+.footer-links,
+.footer-bottom,
+.footer-social,
+.footer-brand h3,
+.footer-brand p {
+  display: none !important;
 }
-.footer-brand p { color: var(--fg-mid); font-size: 0.84rem; line-height: 1.7; margin: 0; }
 
 .footer-social { display: flex; gap: 0.625rem; margin-top: 0.875rem; }
 .footer-social a {
