@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <div class="cv-header-actions">
-  <a href="/files/resume_MortazaHassani.pdf" class="btn btn-primary" target="_blank" rel="noopener">📄 Download PDF</a>
+  <a href="/files/resume_MortazaHassani.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download PDF</a>
 </div>
 
 <!-- EDUCATION -->

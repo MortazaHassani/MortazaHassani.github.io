@@ -45,24 +45,16 @@ layout: default
       <span class="pub-detail-label">Links</span>
       <div class="pub-links">
         {% if page.paperurl %}
-        <a href="{{ page.paperurl }}" class="pub-link" target="_blank" rel="noopener">
-          📄 PDF
-        </a>
+        <a href="{{ page.paperurl }}" class="pub-link" target="_blank" rel="noopener">PDF</a>
         {% endif %}
         {% if page.slidesurl %}
-        <a href="{{ page.slidesurl }}" class="pub-link" target="_blank" rel="noopener">
-          📊 Slides
-        </a>
+        <a href="{{ page.slidesurl }}" class="pub-link" target="_blank" rel="noopener">Slides</a>
         {% endif %}
         {% if page.codeurl %}
-        <a href="{{ page.codeurl }}" class="pub-link" target="_blank" rel="noopener">
-          💻 Code
-        </a>
+        <a href="{{ page.codeurl }}" class="pub-link" target="_blank" rel="noopener">Code</a>
         {% endif %}
         {% if page.doi %}
-        <a href="https://doi.org/{{ page.doi }}" class="pub-link" target="_blank" rel="noopener">
-          🔗 DOI
-        </a>
+        <a href="https://doi.org/{{ page.doi }}" class="pub-link" target="_blank" rel="noopener">DOI</a>
         {% endif %}
       </div>
     </div>

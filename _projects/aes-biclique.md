@@ -1,7 +1,7 @@
 ---
 title: "AES-128 Biclique Cryptanalysis"
 date: 2024-01-01
-icon: "🔐"
+icon: "key"
 status: "Complete"
 tags: [Cryptanalysis, AES, Python, Security]
 github: "https://github.com/MortazaHassani/Biclique-Attack-on-AES-128"

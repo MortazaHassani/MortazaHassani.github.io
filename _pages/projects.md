@@ -12,7 +12,7 @@ label: "Projects"
   {% for project in sorted_projects %}
   <div class="project-card">
     <div class="project-card-header">
-      <span class="project-card-icon">{{ project.icon | default: "⚙️" }}</span>
+      <span class="project-card-icon">{{ project.icon | default: "—" }}</span>
       {% if project.status %}
       <span class="project-card-status">{{ project.status }}</span>
       {% endif %}

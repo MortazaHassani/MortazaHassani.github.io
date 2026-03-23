@@ -1,7 +1,7 @@
 ---
 title: "RoboPot: Autonomous Golf Ball Potting Robot"
 date: 2023-07-01
-icon: "🤖"
+icon: "robot"
 status: "Award Winner"
 tags: [Robotics, Computer Vision, Raspberry Pi, MQTT, PID Control]
 github: "https://github.com/MortazaHassani/RoboPutter"

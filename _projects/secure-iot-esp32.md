@@ -1,7 +1,7 @@
 ---
 title: "Secure IoT Communication Protocol (ESP32)"
 date: 2023-09-01
-icon: "📡"
+icon: "radio"
 status: "Complete"
 tags: [IoT, ESP32, Cryptography, Docker, Security]
 github: "https://github.com/MortazaHassani/secure_iot"

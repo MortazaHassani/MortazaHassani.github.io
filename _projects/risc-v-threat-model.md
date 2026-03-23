@@ -1,7 +1,7 @@
 ---
 title: "RISC-V Hardware Threat Modeling"
 date: 2024-03-01
-icon: "⚙️"
+icon: "gear"
 status: "Complete"
 tags: [RISC-V, Threat Modeling, Security, Hardware]
 excerpt: "Comprehensive threat model for RISC-V microarchitectures covering fault injection, cache-timing vulnerabilities, and pointer integrity attacks."

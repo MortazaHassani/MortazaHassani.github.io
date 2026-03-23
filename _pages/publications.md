@@ -24,9 +24,9 @@ label: "Publications"
     {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
     {% if pub.venue %}<div class="pub-venue">{{ pub.venue }}</div>{% endif %}
     <div class="pub-links">
-      {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">📄 PDF</a>{% endif %}
-      {% if pub.slidesurl %}<a href="{{ pub.slidesurl }}" class="pub-link" target="_blank" rel="noopener">📊 Slides</a>{% endif %}
-      {% if pub.codeurl %}<a href="{{ pub.codeurl }}" class="pub-link" target="_blank" rel="noopener">💻 Code</a>{% endif %}
+      {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{% endif %}
+      {% if pub.slidesurl %}<a href="{{ pub.slidesurl }}" class="pub-link" target="_blank" rel="noopener">Slides</a>{% endif %}
+      {% if pub.codeurl %}<a href="{{ pub.codeurl }}" class="pub-link" target="_blank" rel="noopener">Code</a>{% endif %}
     </div>
   </div>
   {% endfor %}
@@ -46,9 +46,9 @@ label: "Publications"
     {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
     {% if pub.venue %}<div class="pub-venue">{{ pub.venue }}</div>{% endif %}
     <div class="pub-links">
-      {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">📄 PDF</a>{% endif %}
-      {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}" class="pub-link" target="_blank" rel="noopener">🔗 DOI</a>{% endif %}
-      {% if pub.codeurl %}<a href="{{ pub.codeurl }}" class="pub-link" target="_blank" rel="noopener">💻 Code</a>{% endif %}
+      {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{% endif %}
+      {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}" class="pub-link" target="_blank" rel="noopener">DOI</a>{% endif %}
+      {% if pub.codeurl %}<a href="{{ pub.codeurl }}" class="pub-link" target="_blank" rel="noopener">Code</a>{% endif %}
     </div>
   </div>
   {% endfor %}
@@ -68,9 +68,9 @@ label: "Publications"
     {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
     {% if pub.venue %}<div class="pub-venue">{{ pub.venue }}</div>{% endif %}
     <div class="pub-links">
-      {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">📄 PDF</a>{% endif %}
-      {% if pub.slidesurl %}<a href="{{ pub.slidesurl }}" class="pub-link" target="_blank" rel="noopener">📊 Slides</a>{% endif %}
-      {% if pub.codeurl %}<a href="{{ pub.codeurl }}" class="pub-link" target="_blank" rel="noopener">💻 Code</a>{% endif %}
+      {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{% endif %}
+      {% if pub.slidesurl %}<a href="{{ pub.slidesurl }}" class="pub-link" target="_blank" rel="noopener">Slides</a>{% endif %}
+      {% if pub.codeurl %}<a href="{{ pub.codeurl }}" class="pub-link" target="_blank" rel="noopener">Code</a>{% endif %}
     </div>
   </div>
   {% endfor %}
@@ -90,7 +90,7 @@ label: "Publications"
     {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
     {% if pub.venue %}<div class="pub-venue">{{ pub.venue }}</div>{% endif %}
     <div class="pub-links">
-      {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">📄 PDF</a>{% endif %}
+      {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{% endif %}
     </div>
   </div>
   {% endfor %}

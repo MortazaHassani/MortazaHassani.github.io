@@ -1,7 +1,7 @@
 ---
 title: "FPGA-Based MitM Sniffer for TPM Traffic"
 date: 2024-06-01
-icon: "🔬"
+icon: "chip"
 status: "Complete"
 tags: [FPGA, RISC-V, LiteX, TPM, Hardware Security]
 excerpt: "FPGA-based Man-in-the-Middle sniffer to intercept and analyze encrypted TPM-to-processor traffic, developed during internship at Lab-STICC–ARCAD."
