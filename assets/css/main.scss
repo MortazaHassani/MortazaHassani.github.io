@@ -51,6 +51,10 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; scroll-behavior: smooth; background: var(--bg); }
 
+body, button, input, select, textarea, .page, .archive, .page__content, .news-list, .projects-list {
+  font-family: var(--font-sans);
+}
+
 body {
   font-family: var(--font-sans);
   font-size: clamp(1rem, calc(0.95rem + 0.25vw), 1.125rem);
@@ -63,6 +67,15 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   transition: background-color var(--transition), color var(--transition);
+}
+
+h1, h2, h3, h4, h5, h6,
+.project-title,
+.page-title,
+.post-title,
+.section-title,
+.pub-title {
+  font-family: var(--font-serif);
 }
 
 /* Keep old academic-pages layouts in sync with the current theme. */
@@ -232,8 +245,11 @@ nav .nav-menu {
 .theme-toggle {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.35rem;
-  padding: 0.34rem 0.62rem;
+  width: 90px;
+  min-width: 90px;
+  padding: 0.32rem 0.6rem;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: color-mix(in srgb, var(--bg-surface), transparent 10%);
@@ -245,6 +261,12 @@ nav .nav-menu {
   text-transform: uppercase;
   cursor: pointer;
   transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.theme-toggle__label {
+  min-width: 3.3rem;
+  text-align: center;
 }
 
 .theme-toggle:hover {
@@ -510,24 +532,39 @@ nav .nav-menu {
 .news-content-compact p a { color: var(--fg); text-decoration-color: var(--border); }
 .news-content-compact p a:hover { text-decoration-color: var(--fg); }
 
-.news-tag {
-  display: inline-block;
-  padding: 1px 6px;
-  border-radius: 2px;
-  font-size: 0.6875rem;
+.news-tag,
+.pub-type,
+.tag,
+.kw {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 0.75rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  width: fit-content;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  color: var(--fg);
+  background: color-mix(in srgb, var(--bg-surface), transparent 8%);
   font-family: var(--font-sans);
-  border: 1px solid;
 }
-.news-tag.award       { background: #fef9e7; color: #7d6608; border-color: #e9d46a; }
-.news-tag.publication { background: #f0faf4; color: #1a5c35; border-color: #a3d9b3; }
-.news-tag.talk        { background: #f7f0fb; color: #5c2d82; border-color: #c9a8e0; }
-.news-tag.fellowship  { background: #eef4fb; color: #1a4070; border-color: #9ab8d9; }
-.news-tag.service     { background: #fdf0f0; color: #8b1a1a; border-color: #e0a3a3; }
-.news-tag.new         { background: var(--bg-surface); color: var(--fg-mid); border-color: var(--border); }
+.news-tag.award,
+.news-tag.publication,
+.news-tag.talk,
+.news-tag.fellowship,
+.news-tag.service,
+.news-tag.new,
+.pub-type.conference,
+.pub-type.journal,
+.pub-type.thesis,
+.pub-type.preprint {
+  background: color-mix(in srgb, var(--bg-surface), transparent 8%);
+  color: var(--fg);
+  border-color: var(--border);
+}
+
 
 /* --- Publications --- */
 .pub-list { display: flex; flex-direction: column; }
@@ -910,41 +947,7 @@ nav .nav-menu {
 .alert-success { background: #f0faf4; color: #1a5c35; border-color: #a3d9b3; }
 .alert-error   { background: #fdf0f0; color: #8b1a1a; border-color: #e0a3a3; }
 
-[data-theme="dark"] .news-tag.award,
-[data-theme="dark"] .pub-type.preprint {
-  background: rgba(233, 212, 106, 0.16);
-  color: #f3e19f;
-  border-color: rgba(233, 212, 106, 0.45);
-}
 
-[data-theme="dark"] .news-tag.publication,
-[data-theme="dark"] .pub-type.journal,
-[data-theme="dark"] .alert-success {
-  background: rgba(97, 193, 130, 0.16);
-  color: #a7e8bc;
-  border-color: rgba(97, 193, 130, 0.45);
-}
-
-[data-theme="dark"] .news-tag.talk,
-[data-theme="dark"] .pub-type.thesis {
-  background: rgba(172, 130, 219, 0.16);
-  color: #d7b8f5;
-  border-color: rgba(172, 130, 219, 0.45);
-}
-
-[data-theme="dark"] .news-tag.fellowship,
-[data-theme="dark"] .pub-type.conference {
-  background: rgba(126, 170, 222, 0.16);
-  color: #bdd8fb;
-  border-color: rgba(126, 170, 222, 0.45);
-}
-
-[data-theme="dark"] .news-tag.service,
-[data-theme="dark"] .alert-error {
-  background: rgba(232, 116, 116, 0.16);
-  color: #f4b8b8;
-  border-color: rgba(232, 116, 116, 0.45);
-}
 
 /* --- Prose --- */
 .prose h2 { margin-top: 2.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }

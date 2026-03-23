@@ -10,17 +10,7 @@ redirect_from:
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-affiliation">Ph.D. Researcher &middot; Electrical &amp; Computer Engineering</div>
       <h1 class="hero-name">Mortaza Hassani</h1>
-      <div class="hero-title">Hardware Security &middot; Secure Embedded Systems &middot; Medical Device Security</div>
-      <div class="hero-bio">
-        <p>
-          My research focuses on the security of neural medical devices —
-          implantable neurostimulators and related bioelectronic implants.
-          I work on hardware-level attack surfaces, side-channel analysis,
-          and secure SoC design for safety-critical embedded systems.
-        </p>
-      </div>
       <div class="hero-cta">
         <a href="/research/" class="btn btn-primary">Research</a>
         <a href="/publications/" class="btn btn-secondary">Publications</a>
