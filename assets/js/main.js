@@ -4,14 +4,52 @@
 
 'use strict';
 
+/* --- Theme Toggle --- */
+(function () {
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  if (!toggle) return;
+
+  const icon = toggle.querySelector('.theme-toggle__icon');
+  const label = toggle.querySelector('.theme-toggle__label');
+
+  function setTheme(theme) {
+    const isDark = theme === 'dark';
+    root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    try {
+      localStorage.setItem('theme-preference', isDark ? 'dark' : 'light');
+    } catch (_) {}
+
+    toggle.setAttribute('aria-label', isDark ? 'Switch to day mode' : 'Switch to dark mode');
+    if (icon) icon.textContent = isDark ? '☽' : '☼';
+    if (label) label.textContent = isDark ? 'Night' : 'Day';
+  }
+
+  const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  setTheme(current);
+
+  toggle.addEventListener('click', function () {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+  });
+}());
+
 /* --- Navigation Toggle (Mobile) --- */
 (function () {
   const toggle = document.getElementById('nav-toggle');
   const menu   = document.getElementById('nav-menu');
-  if (!toggle || !menu) return;
+  const navMenu = menu ? menu.querySelector('.nav-menu') : null;
+  if (!toggle || !menu || !navMenu) return;
+
+  function closeMenu() {
+    navMenu.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
 
   toggle.addEventListener('click', function () {
-    const isOpen = menu.querySelector('.nav-menu').classList.toggle('open');
+    const isOpen = navMenu.classList.toggle('open');
     toggle.classList.toggle('open', isOpen);
     toggle.setAttribute('aria-expanded', String(isOpen));
     document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -20,21 +58,25 @@
   // Close on outside click
   document.addEventListener('click', function (e) {
     if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-      menu.querySelector('.nav-menu').classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      closeMenu();
     }
   });
 
   // Close on Escape
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
-      menu.querySelector('.nav-menu').classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      closeMenu();
     }
+  });
+
+  // Close mobile menu after selecting a link.
+  menu.querySelectorAll('.nav-link').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Avoid stale open menu when switching from mobile to desktop width.
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) closeMenu();
   });
 }());
 

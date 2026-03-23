@@ -4,12 +4,6 @@
       {{ site.author.name }}
     </a>
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
     <nav id="nav-menu" role="navigation">
       <ul class="nav-menu">
         {% for item in site.data.navigation.main %}
@@ -22,5 +16,18 @@
         {% endfor %}
       </ul>
     </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch color mode">
+        <span class="theme-toggle__icon" aria-hidden="true">☼</span>
+        <span class="theme-toggle__label">Day</span>
+      </button>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
