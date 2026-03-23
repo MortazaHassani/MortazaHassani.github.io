@@ -1,0 +1,172 @@
+<!--
+  CONTACT FORM — Formspree Integration
+  =====================================
+  SETUP INSTRUCTIONS:
+  1. Go to https://formspree.io and create a free account.
+  2. Click "New Form" → enter your email → copy the endpoint URL.
+  3. Replace the action attribute below with your endpoint:
+       action="https://formspree.io/f/YOUR_FORM_ID"
+  4. Formspree free tier: 50 submissions/month, spam filtering, email notifications.
+  5. Optional: Enable reCAPTCHA inside your Formspree dashboard for extra protection.
+
+  SECURITY FEATURES IMPLEMENTED:
+  - Honeypot field (_hp_website) — bots fill it, humans don't; JS silently drops spam
+  - Client-side validation (length, email format, sanitisation)
+  - Rate limiting via localStorage (max 3 per 10 min)
+  - Input maxlength attributes (defense-in-depth)
+  - Server-side spam filtering by Formspree
+  - CORS and CSRF protection handled by Formspree
+-->
+
+<div class="contact-layout">
+  <!-- Sidebar info -->
+  <div class="contact-info">
+    <h3>Let's Connect</h3>
+    <p>
+      I welcome messages about research collaborations, academic inquiries,
+      speaking invitations, and general questions about my work.
+    </p>
+    <p>
+      I try to respond within 3–5 business days. For urgent matters,
+      reach out via LinkedIn.
+    </p>
+
+    <div class="contact-note">
+      🔒 Your message is sent securely. I do not publish my email publicly
+      to avoid spam; this form routes directly to my inbox.
+    </div>
+
+    <div class="contact-social-links">
+      <a href="https://github.com/MortazaHassani" target="_blank" rel="noopener" class="contact-social-link">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        github.com/MortazaHassani
+      </a>
+      <a href="https://linkedin.com/in/MortazaHassani" target="_blank" rel="noopener" class="contact-social-link">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        linkedin.com/in/MortazaHassani
+      </a>
+    </div>
+  </div>
+
+  <!-- Contact form -->
+  <div class="contact-form">
+    <h2>Send a Message</h2>
+
+    <!-- Status alerts -->
+    <div id="cf-success" class="alert alert-success" role="alert">
+      ✅ Thank you! Your message has been sent. I'll get back to you soon.
+    </div>
+    <div id="cf-error" class="alert alert-error" role="alert">
+      ❌ Something went wrong. Please try again or reach out via LinkedIn.
+    </div>
+
+    <!--
+      IMPORTANT: Replace the action URL with your Formspree form endpoint.
+      Example: action="https://formspree.io/f/xpwzabcd"
+    -->
+    <form id="contact-form"
+          action="https://formspree.io/f/YOUR_FORMSPREE_FORM_ID"
+          method="POST"
+          novalidate
+          autocomplete="on">
+
+      <!-- Honeypot field — must stay hidden, NEVER shown to users -->
+      <div class="hp-field" aria-hidden="true">
+        <label for="_hp_website">Leave this blank</label>
+        <input type="text" id="_hp_website" name="_hp_website" tabindex="-1" autocomplete="off" value="">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="cf-name">
+            Full Name <span class="required">*</span>
+          </label>
+          <input
+            class="form-input"
+            type="text"
+            id="cf-name"
+            name="name"
+            placeholder="Jane Smith"
+            maxlength="100"
+            required
+            autocomplete="name">
+          <div class="form-error" id="cf-name-err" role="alert"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cf-email">
+            Email Address <span class="required">*</span>
+          </label>
+          <input
+            class="form-input"
+            type="email"
+            id="cf-email"
+            name="email"
+            placeholder="jane@university.edu"
+            maxlength="254"
+            required
+            autocomplete="email">
+          <div class="form-error" id="cf-email-err" role="alert"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="cf-subject">
+          Subject <span class="required">*</span>
+        </label>
+        <input
+          class="form-input"
+          type="text"
+          id="cf-subject"
+          name="subject"
+          placeholder="Research Collaboration Inquiry"
+          maxlength="200"
+          required>
+        <div class="form-error" id="cf-subject-err" role="alert"></div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="cf-category">
+          Category
+        </label>
+        <select class="form-select" id="cf-category" name="category">
+          <option value="">Select a category (optional)</option>
+          <option value="Research Collaboration">Research Collaboration</option>
+          <option value="Speaking / Talk Invitation">Speaking / Talk Invitation</option>
+          <option value="Academic Inquiry">Academic Inquiry</option>
+          <option value="Industry Partnership">Industry Partnership</option>
+          <option value="General Question">General Question</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="cf-message">
+          Message <span class="required">*</span>
+        </label>
+        <textarea
+          class="form-textarea"
+          id="cf-message"
+          name="message"
+          placeholder="Please describe your inquiry in detail…"
+          maxlength="2000"
+          required
+          rows="6"></textarea>
+        <div class="form-error" id="cf-message-err" role="alert"></div>
+      </div>
+
+      <div class="form-submit-row">
+        <span class="form-status-msg" id="cf-status"></span>
+        <button type="submit" id="cf-submit" class="btn btn-primary">
+          Send Message
+        </button>
+      </div>
+
+      <p style="font-size:0.75rem;color:var(--text-muted);margin-top:1rem;margin-bottom:0;">
+        By submitting this form you agree that your message will be processed
+        securely via <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree</a>.
+        Your contact details will not be shared with third parties.
+      </p>
+    </form>
+  </div>
+</div>

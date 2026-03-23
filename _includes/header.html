@@ -1,0 +1,26 @@
+<header class="site-header" role="banner">
+  <div class="nav-inner">
+    <a class="nav-brand" href="{{ '/' | relative_url }}">
+      {{ site.author.name }}
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="nav-menu" role="navigation">
+      <ul class="nav-menu">
+        {% for item in site.data.navigation.main %}
+        <li>
+          <a class="nav-link{% if page.url == item.url or page.url contains item.url and item.url != '/' %} active{% elsif page.url == '/' and item.url == '/' %} active{% endif %}"
+             href="{{ item.url | relative_url }}">
+            {{ item.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

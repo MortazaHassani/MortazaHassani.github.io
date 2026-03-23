@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-label">News & Updates</div>
+    <h1 class="page-title">{{ page.title }}</h1>
+    <div class="news-header-meta">
+      <span class="news-date-large">{{ page.date | date: "%B %d, %Y" }}</span>
+      {% if page.tag %}
+      <span class="news-tag {{ page.tag }}">{{ page.tag | capitalize }}</span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="page-content narrow">
+  <div class="prose">
+    {{ content }}
+  </div>
+  <div class="news-back">
+    <a href="{{ '/news/' | relative_url }}" class="btn btn-secondary">← Back to News</a>
+  </div>
+</div>

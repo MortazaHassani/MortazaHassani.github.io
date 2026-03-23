@@ -1,0 +1,91 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-label">Publication</div>
+    <h1 class="page-title">{{ page.title }}</h1>
+    <div class="pub-header-meta">
+      {% if page.pub_type %}
+      <span class="pub-type {{ page.pub_type }}">{{ page.pub_type | capitalize }}</span>
+      {% endif %}
+      {% if page.date %}
+      <span class="pub-year">{{ page.date | date: "%Y" }}</span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="page-content narrow">
+  <div class="pub-detail">
+    {% if page.authors %}
+    <div class="pub-detail-row">
+      <span class="pub-detail-label">Authors</span>
+      <span class="pub-detail-value">{{ page.authors }}</span>
+    </div>
+    {% endif %}
+
+    {% if page.venue %}
+    <div class="pub-detail-row">
+      <span class="pub-detail-label">Venue</span>
+      <span class="pub-detail-value"><em>{{ page.venue }}</em></span>
+    </div>
+    {% endif %}
+
+    {% if page.date %}
+    <div class="pub-detail-row">
+      <span class="pub-detail-label">Year</span>
+      <span class="pub-detail-value">{{ page.date | date: "%Y" }}</span>
+    </div>
+    {% endif %}
+
+    {% if page.paperurl or page.slidesurl or page.codeurl %}
+    <div class="pub-detail-row">
+      <span class="pub-detail-label">Links</span>
+      <div class="pub-links">
+        {% if page.paperurl %}
+        <a href="{{ page.paperurl }}" class="pub-link" target="_blank" rel="noopener">
+          📄 PDF
+        </a>
+        {% endif %}
+        {% if page.slidesurl %}
+        <a href="{{ page.slidesurl }}" class="pub-link" target="_blank" rel="noopener">
+          📊 Slides
+        </a>
+        {% endif %}
+        {% if page.codeurl %}
+        <a href="{{ page.codeurl }}" class="pub-link" target="_blank" rel="noopener">
+          💻 Code
+        </a>
+        {% endif %}
+        {% if page.doi %}
+        <a href="https://doi.org/{{ page.doi }}" class="pub-link" target="_blank" rel="noopener">
+          🔗 DOI
+        </a>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  {% if content and content != "" %}
+  <div class="pub-abstract prose">
+    <h2>Abstract</h2>
+    {{ content }}
+  </div>
+  {% endif %}
+
+  {% if page.citation %}
+  <div class="pub-citation">
+    <h3>Citation</h3>
+    <div class="citation-box">
+      <code>{{ page.citation }}</code>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="pub-back">
+    <a href="{{ '/publications/' | relative_url }}" class="btn btn-secondary">← Back to Publications</a>
+  </div>
+</div>
