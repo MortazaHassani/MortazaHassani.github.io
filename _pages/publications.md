@@ -15,10 +15,6 @@ label: "Publications"
 <div class="pub-list" style="margin-bottom:2rem">
   {% for pub in theses %}
   <div class="pub-card">
-    <div class="pub-meta">
-      <span class="pub-type thesis">Thesis</span>
-      <span class="pub-year">{{ pub.date | date: "%Y" }}</span>
-    </div>
     <div class="pub-title"><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></div>
     {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
     {% if pub.venue %}<div class="pub-venue">{{ pub.venue }}</div>{% endif %}
@@ -26,6 +22,10 @@ label: "Publications"
       {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{% endif %}
       {% if pub.slidesurl %}<a href="{{ pub.slidesurl }}" class="pub-link" target="_blank" rel="noopener">Slides</a>{% endif %}
       {% if pub.codeurl %}<a href="{{ pub.codeurl }}" class="pub-link" target="_blank" rel="noopener">Code</a>{% endif %}
+    </div>
+    <div class="pub-meta">
+      <span class="pub-type thesis">Thesis</span>
+      <span class="pub-year">{{ pub.date | date: "%Y" }}</span>
     </div>
   </div>
   {% endfor %}
@@ -36,10 +36,6 @@ label: "Publications"
 <div class="pub-list" style="margin-bottom:2rem">
   {% for pub in journals %}
   <div class="pub-card">
-    <div class="pub-meta">
-      <span class="pub-type journal">Journal</span>
-      <span class="pub-year">{{ pub.date | date: "%Y" }}</span>
-    </div>
     <div class="pub-title"><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></div>
     {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
     {% if pub.venue %}<div class="pub-venue">{{ pub.venue }}</div>{% endif %}
@@ -47,6 +43,10 @@ label: "Publications"
       {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{% endif %}
       {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}" class="pub-link" target="_blank" rel="noopener">DOI</a>{% endif %}
       {% if pub.codeurl %}<a href="{{ pub.codeurl }}" class="pub-link" target="_blank" rel="noopener">Code</a>{% endif %}
+    </div>
+    <div class="pub-meta">
+      <span class="pub-type journal">Journal</span>
+      <span class="pub-year">{{ pub.date | date: "%Y" }}</span>
     </div>
   </div>
   {% endfor %}
@@ -57,10 +57,6 @@ label: "Publications"
 <div class="pub-list" style="margin-bottom:2rem">
   {% for pub in conferences %}
   <div class="pub-card">
-    <div class="pub-meta">
-      <span class="pub-type conference">Conference</span>
-      <span class="pub-year">{{ pub.date | date: "%Y" }}</span>
-    </div>
     <div class="pub-title"><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></div>
     {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
     {% if pub.venue %}<div class="pub-venue">{{ pub.venue }}</div>{% endif %}
@@ -68,6 +64,10 @@ label: "Publications"
       {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{% endif %}
       {% if pub.slidesurl %}<a href="{{ pub.slidesurl }}" class="pub-link" target="_blank" rel="noopener">Slides</a>{% endif %}
       {% if pub.codeurl %}<a href="{{ pub.codeurl }}" class="pub-link" target="_blank" rel="noopener">Code</a>{% endif %}
+    </div>
+    <div class="pub-meta">
+      <span class="pub-type conference">Conference</span>
+      <span class="pub-year">{{ pub.date | date: "%Y" }}</span>
     </div>
   </div>
   {% endfor %}
@@ -78,15 +78,15 @@ label: "Publications"
 <div class="pub-list" style="margin-bottom:2rem">
   {% for pub in preprints %}
   <div class="pub-card">
-    <div class="pub-meta">
-      <span class="pub-type preprint">Preprint</span>
-      <span class="pub-year">{{ pub.date | date: "%Y" }}</span>
-    </div>
     <div class="pub-title"><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></div>
     {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
     {% if pub.venue %}<div class="pub-venue">{{ pub.venue }}</div>{% endif %}
     <div class="pub-links">
       {% if pub.paperurl %}<a href="{{ pub.paperurl }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{% endif %}
+    </div>
+    <div class="pub-meta">
+      <span class="pub-type preprint">Preprint</span>
+      <span class="pub-year">{{ pub.date | date: "%Y" }}</span>
     </div>
   </div>
   {% endfor %}

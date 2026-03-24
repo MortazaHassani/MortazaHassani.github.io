@@ -274,13 +274,13 @@ header_action:
   <div class="pub-list">
     {% for pub in all_pubs %}
     <div class="pub-card">
+      <div class="pub-title"><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></div>
+      {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
+      {% if pub.venue %}<div class="pub-venue">{{ pub.venue }}</div>{% endif %}
       <div class="pub-meta">
         {% if pub.pub_type %}<span class="pub-type {{ pub.pub_type }}">{{ pub.pub_type }}</span>{% endif %}
         <span class="pub-year">{{ pub.date | date: "%Y" }}</span>
       </div>
-      <div class="pub-title"><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></div>
-      {% if pub.authors %}<div class="pub-authors">{{ pub.authors }}</div>{% endif %}
-      {% if pub.venue %}<div class="pub-venue">{{ pub.venue }}</div>{% endif %}
     </div>
     {% endfor %}
   </div>

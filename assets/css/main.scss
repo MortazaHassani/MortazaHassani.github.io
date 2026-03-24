@@ -620,7 +620,7 @@ nav .nav-menu {
   gap: 0.75rem;
   padding: 0.75rem 0.5rem;
   border-bottom: 1px solid var(--border-light);
-  align-items: baseline;
+  align-items: stretch;
   border-radius: 4px;
   transition: background var(--transition);
   cursor: default;
@@ -628,7 +628,7 @@ nav .nav-menu {
 .news-item-compact:hover { background: color-mix(in srgb, var(--bg-surface-2), transparent 35%); }
 .news-item-compact:last-child { border-bottom: none; }
 
-.news-date { font-size: 0.75rem; color: var(--fg-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-sans); }
+.news-date { font-size: 0.75rem; color: var(--fg-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-sans); display: flex; align-items: center; justify-content: center; }
 
 .news-content-compact {
   display: flex;
@@ -1348,6 +1348,7 @@ select:focus-visible {
   /* Page header */
   .page-header { padding: 1.75rem 0 1.5rem; }
   .page-header-inner { flex-direction: column; align-items: flex-start; gap: 0.875rem; }
+  .page-header-inner > .btn { align-self: center; }
   .page-subtitle { font-size: 0.9rem; }
 
   /* Home sections */
@@ -1356,17 +1357,13 @@ select:focus-visible {
   .section-title      { font-size: 1.5rem; }
 
   /* Badges: drop fixed width on stacked layouts */
-  .pub-type, .pub-year, .news-tag, .post-category, .post-card-category {
-    width: auto;
-    min-width: 0;
-  }
   .pub-meta { flex-wrap: wrap; }
   .news-item-compact .news-tag { margin-left: 0; }
 
   /* Grids → single column */
   .cv-entry          { grid-template-columns: 1fr; gap: 0.25rem; }
   .post-card         { grid-template-columns: 1fr; gap: 0.375rem; }
-  .post-card-meta    { text-align: left; display: flex; gap: 0.875rem; align-items: center; }
+  .post-card-meta    { text-align: left; display: flex; gap: 0.25rem; align-items: center; }
   .form-row          { grid-template-columns: 1fr; }
   .pub-detail-row    { grid-template-columns: 1fr; gap: 0.25rem; }
   .news-item-compact { grid-template-columns: 1fr; gap: 0.25rem; }
