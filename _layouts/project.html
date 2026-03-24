@@ -4,35 +4,37 @@ layout: default
 
 <div class="page-header">
   <div class="page-header-inner">
-    <div class="page-label">Project</div>
-    <h1 class="page-title">{{ page.title }}</h1>
-    {% if page.subtitle %}
-    <p class="page-subtitle">{{ page.subtitle }}</p>
-    {% endif %}
-    {% if page.tags %}
-    <div class="project-header-tags">
-      {% for tag in page.tags %}
-      <span class="tag tag-blue">{{ tag }}</span>
-      {% endfor %}
+    <div class="page-header-text">
+      <div class="page-label">Project</div>
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="page-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      {% if page.tags %}
+      <div class="project-header-tags">
+        {% for tag in page.tags %}
+        <span class="tag tag-blue">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% if page.github or page.demo or page.paper %}
+    <div class="project-links-top">
+      {% if page.github %}
+      <a href="{{ page.github }}" class="btn btn-primary" target="_blank" rel="noopener">GitHub</a>
+      {% endif %}
+      {% if page.demo %}
+      <a href="{{ page.demo }}" class="btn btn-secondary" target="_blank" rel="noopener">Demo</a>
+      {% endif %}
+      {% if page.paper %}
+      <a href="{{ page.paper }}" class="btn btn-secondary" target="_blank" rel="noopener">Paper</a>
+      {% endif %}
     </div>
     {% endif %}
   </div>
 </div>
 
 <div class="page-content narrow">
-  {% if page.github or page.demo or page.paper %}
-  <div class="project-links-top">
-    {% if page.github %}
-    <a href="{{ page.github }}" class="btn btn-primary" target="_blank" rel="noopener">GitHub</a>
-    {% endif %}
-    {% if page.demo %}
-    <a href="{{ page.demo }}" class="btn btn-secondary" target="_blank" rel="noopener">Demo</a>
-    {% endif %}
-    {% if page.paper %}
-    <a href="{{ page.paper }}" class="btn btn-secondary" target="_blank" rel="noopener">Paper</a>
-    {% endif %}
-  </div>
-  {% endif %}
 
   <div class="prose">
     {{ content }}

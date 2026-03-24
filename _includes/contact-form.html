@@ -1,22 +1,3 @@
-<!--
-  CONTACT FORM — Formspree Integration
-  =====================================
-  SETUP INSTRUCTIONS:
-  1. Go to https://formspree.io and create a free account.
-  2. Click "New Form" → enter your email → copy the endpoint URL.
-  3. Replace the action attribute below with your endpoint:
-       action="https://formspree.io/f/YOUR_FORM_ID"
-  4. Formspree free tier: 50 submissions/month, spam filtering, email notifications.
-  5. Optional: Enable reCAPTCHA inside your Formspree dashboard for extra protection.
-
-  SECURITY FEATURES IMPLEMENTED:
-  - Honeypot field (_hp_website) — bots fill it, humans don't; JS silently drops spam
-  - Client-side validation (length, email format, sanitisation)
-  - Rate limiting via localStorage (max 3 per 10 min)
-  - Input maxlength attributes (defense-in-depth)
-  - Server-side spam filtering by Formspree
-  - CORS and CSRF protection handled by Formspree
--->
 
 <div class="contact-layout">
   <!-- Sidebar info -->

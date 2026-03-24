@@ -230,10 +230,21 @@
     }
   });
 
-  // Live validation on blur
-  ['cf-name', 'cf-email', 'cf-subject', 'cf-message'].forEach(id => {
+  // Prevent blur-triggered reflow from shifting the button before mouseup lands
+  if (submitBtn) {
+    submitBtn.addEventListener('mousedown', e => e.preventDefault());
+  }
+
+  // Live validation on blur — validate only the field that was just left
+  const fieldMap = {
+    'cf-name':    ['cf-name-err',    v => sanitize(v).length >= 2 && sanitize(v).length <= 100,    'Name must be 2–100 characters.'],
+    'cf-email':   ['cf-email-err',   v => EMAIL_RE.test(sanitize(v)),                               'Please enter a valid email address.'],
+    'cf-subject': ['cf-subject-err', v => sanitize(v).length >= 3 && sanitize(v).length <= 200,    'Subject must be 3–200 characters.'],
+    'cf-message': ['cf-message-err', v => sanitize(v).length >= 10 && sanitize(v).length <= 2000,  'Message must be 10–2000 characters.'],
+  };
+  Object.entries(fieldMap).forEach(([id, [errId, check, msg]]) => {
     const el = document.getElementById(id);
-    if (el) el.addEventListener('blur', validate);
+    if (el) el.addEventListener('blur', () => validateField(id, check, errId, msg));
   });
 }());
 

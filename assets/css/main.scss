@@ -991,7 +991,8 @@ nav .nav-menu {
 .page-subtitle { font-size: 1rem; color: var(--fg-mid); max-width: none; width: 100%; line-height: 1.7; margin: 0; font-family: var(--font-sans); }
 
 .page-content { max-width: var(--max-width); margin: 0 auto; padding: 0 1.75rem; }
-.page-content.narrow { max-width: var(--content-width); }
+.page-content.narrow { max-width: var(--content-width); padding-top: 1.25rem; padding-bottom: 1.25rem; }
+.pub-page-content { padding-top: 1.25rem; padding-bottom: 1.25rem; }
 
 /* --- Post Layout --- */
 .post-header { padding: 3rem 0 2.25rem; border-bottom: 1px solid var(--border); }
@@ -1171,8 +1172,12 @@ nav .nav-menu {
 
 /* --- Contact Form --- */
 .contact-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; }
+.contact-info {
+  padding-top: 3.125rem;
+  width: calc(100% + 10px);
+}
 .contact-info h3 { font-family: var(--font-serif); font-size: 1.125rem; color: var(--fg); margin-bottom: 0.75rem; font-weight: 500; }
-.contact-info p  { font-size: 0.9rem; color: var(--fg-mid); line-height: 1.7; font-family: var(--font-sans); }
+.contact-info p  { font-size: 0.9rem; color: var(--fg-mid); line-height: 2.1; font-family: var(--font-sans); }
 .contact-info .contact-note {
   font-size: 0.8125rem;
   color: var(--fg-muted);
@@ -1182,6 +1187,7 @@ nav .nav-menu {
   padding: 0.625rem 0.875rem;
   margin-top: 1rem;
   font-family: var(--font-sans);
+  width: calc(100% - 10px);
 }
 .contact-social-links { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1.25rem; }
 .contact-social-link {
