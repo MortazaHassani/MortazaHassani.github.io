@@ -6,11 +6,12 @@ subtitle: "Mortaza Hassani — Ph.D. Researcher, ECE, University of Massachusett
 label: "CV"
 redirect_from:
   - /resume/
+header_action:
+  url: /files/resume_MortazaHassani.pdf
+  label: "Download PDF"
+  target: "_blank"
+  rel: "noopener"
 ---
-
-<div class="cv-header-actions">
-  <a href="/files/resume_MortazaHassani.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download PDF</a>
-</div>
 
 <!-- EDUCATION -->
 <div class="cv-section">

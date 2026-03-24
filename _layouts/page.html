@@ -4,16 +4,29 @@ layout: default
 
 <div class="page-header">
   <div class="page-header-inner">
-    {% if page.label %}
-    <div class="page-label">{{ page.label }}</div>
-    {% endif %}
-    <h1 class="page-title">{{ page.title }}</h1>
-    {% if page.subtitle %}
-    <p class="page-subtitle">{{ page.subtitle }}</p>
+    <div class="page-header-text">
+      {% if page.label %}
+      <div class="page-label">{{ page.label }}</div>
+      {% endif %}
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="page-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+    </div>
+    {% if page.header_action %}
+    <a href="{{ page.header_action.url }}" class="btn btn-primary"
+       {% if page.header_action.target %}target="{{ page.header_action.target }}"{% endif %}
+       {% if page.header_action.rel %}rel="{{ page.header_action.rel }}"{% endif %}>
+      {{ page.header_action.label }}
+    </a>
     {% endif %}
   </div>
 </div>
 
+{% if page.page_sections %}
+{{ content }}
+{% else %}
 <div class="page-content{% if page.narrow %} narrow{% endif %}">
   {{ content }}
 </div>
+{% endif %}

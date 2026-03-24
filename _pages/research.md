@@ -4,8 +4,11 @@ permalink: /research/
 title: "Research"
 subtitle: "Security of neural medical devices, secure SoC design, and hardware-level attack analysis."
 label: "Research"
+page_sections: true
 ---
 
+<div class="page-section">
+<div class="page-section-inner">
 <div class="research-page-areas">
 
   <div class="research-area">
@@ -93,9 +96,11 @@ label: "Research"
   </div>
 
 </div>
+</div>
+</div>
 
-<hr>
-
+<div class="page-section-alt">
+<div class="page-section-inner">
 <div class="cv-section">
   <div class="cv-section-title">Research Positions</div>
   <div class="cv-entry">
@@ -120,4 +125,6 @@ label: "Research"
       <span class="cv-institution">Lab-STICC – ARCAD · Université Bretagne Sud · Lorient, France</span>
     </div>
   </div>
+</div>
+</div>
 </div>

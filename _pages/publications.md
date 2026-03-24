@@ -12,7 +12,6 @@ label: "Publications"
 {% assign preprints    = site.publications | where: "pub_type", "preprint"   | sort: "date" | reverse %}
 
 {% if theses.size > 0 %}
-<div class="cv-section-title">Theses</div>
 <div class="pub-list" style="margin-bottom:2rem">
   {% for pub in theses %}
   <div class="pub-card">
@@ -34,7 +33,6 @@ label: "Publications"
 {% endif %}
 
 {% if journals.size > 0 %}
-<div class="cv-section-title">Journal Articles</div>
 <div class="pub-list" style="margin-bottom:2rem">
   {% for pub in journals %}
   <div class="pub-card">
@@ -56,7 +54,6 @@ label: "Publications"
 {% endif %}
 
 {% if conferences.size > 0 %}
-<div class="cv-section-title">Conference Papers</div>
 <div class="pub-list" style="margin-bottom:2rem">
   {% for pub in conferences %}
   <div class="pub-card">
@@ -78,7 +75,6 @@ label: "Publications"
 {% endif %}
 
 {% if preprints.size > 0 %}
-<div class="cv-section-title">Preprints</div>
 <div class="pub-list" style="margin-bottom:2rem">
   {% for pub in preprints %}
   <div class="pub-card">

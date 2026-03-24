@@ -10,9 +10,11 @@ label: "News"
   {% assign sorted_news = site.news | sort: "date" | reverse %}
   {% for item in sorted_news %}
   <div class="news-page-item">
-    <div class="news-page-date">{{ item.date | date: "%b %d, %Y" }}</div>
-    <div class="news-page-content">
+    <div class="news-page-meta">
+      <div class="news-page-date">{{ item.date | date: "%b %d, %Y" }}</div>
       {% if item.tag %}<div class="news-tag {{ item.tag }}">{{ item.tag }}</div>{% endif %}
+    </div>
+    <div class="news-page-content">
       <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
       {% if item.excerpt %}<p>{{ item.excerpt | strip_html | truncate: 200 }}</p>{% endif %}
     </div>
