@@ -2,9 +2,13 @@
 layout: page
 permalink: /contact/
 title: "Contact"
-subtitle: "Get in touch for research collaborations, speaking invitations, or general inquiries."
+subtitle: "Contact details from CV."
 label: "Contact"
 narrow: true
 ---
 
-{% include contact-form.html %}
+- Email: mortazahassa@umass.edu
+- GitHub: https://github.com/MortazaHassani
+- LinkedIn: https://linkedin.com/in/MortazaHassani
+- Website: https://mortazahassani.github.io
+- Location: Amherst, Massachusetts, United States

@@ -18,9 +18,10 @@ redirect_from:
     <div class="hero-actions">
       <blockquote class="hero-quote">
         <span class="hero-quote__mark">&ldquo;</span>
-        <p class="hero-quote__text">PhD researcher working at the intersection of hardware security and neural medical devices — building defenses where the stakes are someone's life.</p>
+        <p class="hero-quote__text">Hi! I am a first-year PhD student at ECE department of UMass Amherst. I earned my MS degree through the Erasmus Mundus Joint Master Degree in Cybersecurity with an IoT specialization from the University of Southern Brittany (France) and the University of Brussels (Belgium) in 2025, and my BE in Computer Systems Engineering in 2023. My research focuses on secure & privacy preserving hardware architectures for neural medical devices, bridging the gap between ultra-low-power design and robust security. Outside the lab, I plays piano and enjoys finding ways to apply engineering principles to everyday life.
+        </p>
         <footer class="hero-quote__footer">
-          <span class="hero-quote__role">Hardware Security · Secure SoC · Implantable Devices</span>
+          <span class="hero-quote__role">Hardware Security · Secure SoC · RISC-V · S&P</span>
           <span class="hero-quote__affil">University of Massachusetts Amherst</span>
         </footer>
       </blockquote>
@@ -45,18 +46,18 @@ redirect_from:
       <a href="/research/" class="section-link">More &rarr;</a>
     </div>
     <div class="research-keywords">
-      <span class="kw">Neural Medical Device Security</span>
-      <span class="kw">Implantable Neurostimulators</span>
+      <span class="kw">Neural Medical Devices</span>
+      <span class="kw">Embedded Systems Design and Security</span>
+      <span class="kw">Ultra-Low-Power Design</span>
+      <span class="kw">Security & Privacy</span>
+      <span class="kw">AI Safety</span>
       <span class="kw">Side-Channel Analysis</span>
       <span class="kw">Secure SoC Design</span>
-      <span class="kw">Secure Embedded Systems</span>
-      <span class="kw">Hardware Cryptography</span>
-      <span class="kw">RISC-V Security</span>
-      <span class="kw">Electromagnetic Analysis</span>
-      <span class="kw">Fault Injection</span>
-      <span class="kw">IoMT Security</span>
-      <span class="kw">FPGA Security</span>
-      <span class="kw">Reverse Engineering</span>
+      <span class="kw">RISC-V</span>
+      <span class="kw">FPGA</span>
+      <span class="kw">IoT</span>
+      <span class="kw">Machine Learning</span>
+      <span class="kw">Computer Vision</span>
     </div>
   </div>
 </section>

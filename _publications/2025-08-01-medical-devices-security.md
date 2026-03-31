@@ -5,16 +5,15 @@ pub_type: thesis
 authors: "<strong>Mortaza Hassani</strong>"
 venue: "Erasmus Mundus Joint M.S. Thesis, Université Libre de Bruxelles & Université Bretagne Sud"
 selected: true
-excerpt: "A comprehensive security analysis of implantable and wearable medical devices, covering hardware vulnerabilities, side-channel attack surfaces, privacy implications, and GDPR/FDA regulatory compliance."
+excerpt: "Research on security of internet-connected medical devices, including vulnerability analysis, firmware extraction, reverse engineering, and communication security."
 ---
 
-This master's thesis presents a comprehensive security analysis of implantable and wearable medical devices — specifically focusing on the Internet of Medical Things (IoMT) ecosystem.
+This master's thesis studies the security of Internet of Medical Devices with focus on practical vulnerabilities and mitigation strategies.
 
 **Key contributions:**
-- Systematic threat modeling of IoMT device attack surfaces (JTAG, UART, BLE, NFC)
-- Timing-based side-channel analysis of BLE pairing protocols
-- Privacy analysis under GDPR and FDA cybersecurity guidance frameworks
-- Hardware teardown methodology for medical device security assessment
-- Proposed privacy-preserving hardware architecture recommendations
+- Vulnerability and design-flaw analysis based on device and protocol behavior
+- Firmware extraction and reverse engineering workflow in a medical-device case study
+- Security analysis for BLE and wireless communication channels
+- Alignment of security recommendations with relevant regulatory guidance
 
-The research was conducted at UMass Amherst (visiting scholar) and ULB (Erasmus Mundus programme), under the supervision of Prof. Wayne Burleson.
+The work was conducted during the Erasmus Mundus Joint M.S. in Cybersecurity and connected research activity at UMass Amherst.

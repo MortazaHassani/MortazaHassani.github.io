@@ -1,6 +1,6 @@
 ---
 title: "Awarded Erasmus Mundus Scholarship"
-date: 2024-09-01
+date: 2023-09-01
 tag: award
 ---
 

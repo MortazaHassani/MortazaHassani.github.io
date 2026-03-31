@@ -1,18 +1,10 @@
 # Authors
 
-Name Name:
-  name        : "MH"
-  uri         : ""
-  email       : "cyber.intern@outlook.com"
-  bio         : "Allias"
-  avatar      : ""
-  twitter     : ""
-  google_plus : ""
-
-# Name2 Name2:
-#   name        : "Name2 Name2"
-#   email       : "name2@name2.com"
-#   bio         : "I ordered what?"
-#   avatar      : "bio-photo.jpg"
-#   twitter     : "name2"
-#   google_plus : "Name"
+Mortaza Hassani:
+  name        : "Mortaza Hassani"
+  uri         : "https://mortazahassani.github.io"
+  email       : "mortazahassa@umass.edu"
+  bio         : "PhD student in ECE at UMass Amherst working on hardware security for implantable medical devices."
+  avatar      : "images/profile.jpg"
+  github      : "MortazaHassani"
+  linkedin    : "MortazaHassani"

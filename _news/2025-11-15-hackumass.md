@@ -1,7 +1,7 @@
 ---
-title: "Participated in HackUMass XIII Hackathon"
+title: "Organized AI Dev 25 x NYC"
 date: 2025-11-15
 tag: service
 ---
 
-Participated in **HackUMass XIII** at the University of Massachusetts Amherst — one of the largest collegiate hackathons in the Northeast. A great opportunity to collaborate, build, and engage with the broader tech and research community.
+Contributed as an organizer for **AI Dev 25 x NYC** with DeepLearning.AI, supporting event planning and execution for an AI-focused community gathering.

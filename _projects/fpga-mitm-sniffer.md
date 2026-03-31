@@ -4,16 +4,15 @@ date: 2024-06-01
 icon: "chip"
 status: "Complete"
 tags: [FPGA, RISC-V, LiteX, TPM, Hardware Security]
-excerpt: "FPGA-based Man-in-the-Middle sniffer to intercept and analyze encrypted TPM-to-processor traffic, developed during internship at Lab-STICC–ARCAD."
+excerpt: "Internship project on FPGA and LiteX-based cybersecurity tooling for SPI communication interface analysis."
 ---
 
-Developed during a research internship at **Lab-STICC – ARCAD** (Université Bretagne Sud, Lorient, France), this project engineered an **FPGA-based MitM sniffer** for intercepting encrypted communications between a Trusted Platform Module (TPM) and its host processor.
+Developed during a research internship at **Lab-STICC - ARCAD** (Universite Bretagne Sud, Lorient, France), this project focused on FPGA and LiteX-based tooling for communication-interface security analysis.
 
 **Technical highlights:**
-- FPGA implementation of a transparent SPI/I²C bus interposer
-- Integration with RISC-V SoC architecture using the LiteX framework
-- Soft-core peripheral integration (UART, SPI, I²C)
-- Automated Python build system for SoC configurations
-- Analysis of TPM command/response sequences
+- Cybersecurity tooling for SPI communication interface analysis
+- SoC architecture configuration using C and Python
+- Integration of UART, SPI, and I2C cores with LiteX
+- FPGA-centric prototyping workflow
 
-**Technologies:** FPGA, Verilog, LiteX, RISC-V, Python, SPI/I²C protocols
+**Technologies:** FPGA, LiteX, RISC-V, Python, C, SPI/UART/I2C

@@ -1,19 +1,18 @@
 ---
-title: "RISC-V Hardware Threat Modeling"
+title: "RISC-V Processor and Security: Threats, Attacks, and Countermeasures"
 date: 2024-03-01
 icon: "gear"
 status: "Complete"
 tags: [RISC-V, Threat Modeling, Security, Hardware]
-excerpt: "Comprehensive threat model for RISC-V microarchitectures covering fault injection, cache-timing vulnerabilities, and pointer integrity attacks."
+excerpt: "Research project on RISC-V processor security covering threat surfaces, practical attack paths, and hardware-level countermeasures."
 ---
 
-This project develops a **systematic hardware threat model** for RISC-V based processor architectures, identifying and categorizing security vulnerabilities across the hardware stack.
+This project studies security risks in RISC-V processor architectures and maps practical attack vectors to potential mitigations.
 
-**Threat categories analyzed:**
-- **Fault Injection Attacks:** Voltage glitching, clock glitching, laser fault injection
-- **Cache Timing Attacks:** Prime+Probe, Flush+Reload on RISC-V cache hierarchies
-- **Pointer Integrity Vulnerabilities:** Stack overflow, use-after-free exploitation
-- **Side-Channel Leakage:** Power and EM analysis of RISC-V cryptographic workloads
-- **Debug Interface Abuse:** JTAG security and firmware extraction
+**Focus areas:**
+- Threat modeling across hardware and interface layers
+- Attack analysis for embedded processor deployments
+- Countermeasure-oriented review of architecture and implementation choices
+- Security engineering perspective for RISC-V-based systems
 
-**Output:** Threat model documentation, attack surface analysis, and proposed countermeasure recommendations.
+**Output:** Threat model documentation and security recommendations.
